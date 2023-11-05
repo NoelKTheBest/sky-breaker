@@ -1,0 +1,32 @@
+Project Backlog:
+	Basic Setup:
+		Wall Cling
+		Wall Jump
+		Have player fall off wall after hanging for too long (5-10 seconds)
+		Coyote time
+		Input safegaurding (input leniency, mostly needed for jump)
+		Create a death area so the player dies if they fall below the screen
+		Create a camera to scroll through the level as the player goes higher. Camera doesn't go back down
+	Feature Testing:
+		Moving platforms
+		Wall spikes
+		Floor spikes
+		Unclingable walls
+		Wall slide
+		Falling objects
+	Polish:
+		Switch from base animations to warrior animations
+		Jump and gravity tweaks
+		Tweak controls
+	Ship:
+		Create submission
+		Submit to game jam page
+
+Next Sprint 1/10:
+ Focus: Establish basic controls for the game to function properly.
+		I need to spend the next sprint working on properly setting up
+		wall detection and controls for interacting with walls
+		
+ - Wall cling
+ - Wall jump
+ - fall off wall
