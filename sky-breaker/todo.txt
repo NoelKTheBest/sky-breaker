@@ -2,7 +2,7 @@ Project Backlog:
 	Basic Setup:
 		Wall Cling
 		Wall Jump
-		Have player fall off wall after hanging for too long (5-10 seconds)
+		Have player fall off wall after hanging for too long (2.5-5 seconds)
 		Coyote time
 		Input safegaurding (input leniency, mostly needed for jump)
 		Create a death area so the player dies if they fall below the screen
@@ -22,11 +22,32 @@ Project Backlog:
 		Create submission
 		Submit to game jam page
 
-Next Sprint 1/10:
+--------------------------------------------------------------------------------------------------------------
+
+Previous Sprint 1/10:
  Focus: Establish basic controls for the game to function properly.
 		I need to spend the next sprint working on properly setting up
 		wall detection and controls for interacting with walls
 		
  - Wall cling
- - Wall jump
  - fall off wall
+ - Wall jump
+ 
+ Results: I was able to setup a wall cling, fall, and jump mechanic. This
+		  if my first time setitng up wall jump controls, but the controls
+		  work at the very least. Because of the complexity of the wall jump
+		  code so far, I will need to do some revisions on the code that I 
+		  will save for the next sprint.
+
+--------------------------------------------------------------------------------------------------------------
+
+Next Sprint 2/10:
+ Focus: Refactor controls setup so that we influence the velocity of the 
+		player rather than setting it. In addition, let's get rid of wall cling
+		and just have a wall jump that will require a specific Input to trigger
+		the wall jump code. Taking the wall cling out of the game should make
+		the initial setup go much smoother.
+
+ - Coyote Time
+ - Input leniency
+ - Remove wall cling

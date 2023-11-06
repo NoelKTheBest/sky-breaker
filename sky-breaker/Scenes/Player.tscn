@@ -1,10 +1,11 @@
-[gd_scene load_steps=38 format=2]
+[gd_scene load_steps=45 format=2]
 
 [ext_resource path="res://AssetPack-V1/Sprite Sheets/Character Idle 48x48.png" type="Texture" id=1]
 [ext_resource path="res://AssetPack-V1/Sprite Sheets/player land 48x48.png" type="Texture" id=2]
 [ext_resource path="res://AssetPack-V1/Sprite Sheets/run cycle 48x48.png" type="Texture" id=3]
 [ext_resource path="res://AssetPack-V1/Sprite Sheets/player jump 48x48.png" type="Texture" id=4]
 [ext_resource path="res://Scripts/Player.gd" type="Script" id=5]
+[ext_resource path="res://AssetPack-V1/Sprite Sheets/wall land 48x48.png" type="Texture" id=6]
 
 [sub_resource type="CapsuleShape2D" id=1]
 
@@ -128,6 +129,30 @@ region = Rect2( 288, 0, 48, 48 )
 atlas = ExtResource( 3 )
 region = Rect2( 336, 0, 48, 48 )
 
+[sub_resource type="AtlasTexture" id=33]
+atlas = ExtResource( 6 )
+region = Rect2( 0, 0, 48, 48 )
+
+[sub_resource type="AtlasTexture" id=34]
+atlas = ExtResource( 6 )
+region = Rect2( 48, 0, 48, 48 )
+
+[sub_resource type="AtlasTexture" id=35]
+atlas = ExtResource( 6 )
+region = Rect2( 96, 0, 48, 48 )
+
+[sub_resource type="AtlasTexture" id=36]
+atlas = ExtResource( 6 )
+region = Rect2( 144, 0, 48, 48 )
+
+[sub_resource type="AtlasTexture" id=37]
+atlas = ExtResource( 6 )
+region = Rect2( 192, 0, 48, 48 )
+
+[sub_resource type="AtlasTexture" id=38]
+atlas = ExtResource( 6 )
+region = Rect2( 240, 0, 48, 48 )
+
 [sub_resource type="SpriteFrames" id=2]
 animations = [ {
 "frames": [ SubResource( 3 ) ],
@@ -159,6 +184,11 @@ animations = [ {
 "loop": true,
 "name": "Run",
 "speed": 10.0
+}, {
+"frames": [ SubResource( 33 ), SubResource( 34 ), SubResource( 35 ), SubResource( 36 ), SubResource( 37 ), SubResource( 38 ) ],
+"loop": false,
+"name": "Wall Cling",
+"speed": 10.0
 } ]
 
 [node name="KinematicBody2D" type="KinematicBody2D"]
@@ -170,5 +200,15 @@ shape = SubResource( 1 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 frames = SubResource( 2 )
-animation = "Land"
+animation = "Wall Cling"
 frame = 1
+
+[node name="WallClingTimer" type="Timer" parent="."]
+wait_time = 2.5
+one_shot = true
+
+[node name="WallJumpTimer" type="Timer" parent="."]
+wait_time = 0.5
+
+[connection signal="timeout" from="WallClingTimer" to="." method="_on_WallCingTimer_timeout"]
+[connection signal="timeout" from="WallJumpTimer" to="." method="_on_WallJumpTimer_timeout"]

@@ -9,16 +9,47 @@ extents = Vector2( 299, 10 )
 [node name="Node2D" type="Node2D"]
 
 [node name="KinematicBody2D" parent="." instance=ExtResource( 1 )]
+position = Vector2( 448, 343 )
 
-[node name="StaticBody2D" type="StaticBody2D" parent="."]
+[node name="Floor" type="StaticBody2D" parent="."]
 position = Vector2( 447, 390 )
 __meta__ = {
 "_edit_group_": true
 }
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Floor"]
 shape = SubResource( 1 )
 
-[node name="Sprite" type="Sprite" parent="StaticBody2D"]
+[node name="Sprite" type="Sprite" parent="Floor"]
+scale = Vector2( 9.3125, 0.34375 )
+texture = ExtResource( 2 )
+
+[node name="Right Wall" type="StaticBody2D" parent="."]
+position = Vector2( 735, 170 )
+rotation = 1.5708
+scale = Vector2( 0.7, 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Right Wall"]
+shape = SubResource( 1 )
+
+[node name="Sprite" type="Sprite" parent="Right Wall"]
+scale = Vector2( 9.3125, 0.34375 )
+texture = ExtResource( 2 )
+
+[node name="Left Wall" type="StaticBody2D" parent="."]
+position = Vector2( 158, 170 )
+rotation = 4.71239
+scale = Vector2( 0.7, 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Left Wall"]
+shape = SubResource( 1 )
+
+[node name="Sprite" type="Sprite" parent="Left Wall"]
 scale = Vector2( 9.3125, 0.34375 )
 texture = ExtResource( 2 )
