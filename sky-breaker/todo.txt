@@ -51,3 +51,17 @@ Next Sprint 2/10:
  - Coyote Time
  - Input leniency
  - Remove wall cling
+ 
+ Results: I removed the wall cling and turned it into a wall slide and the wall 
+		  jump works for y velocity, but not for x velocity. For x velocity, 
+		  I need to push the button in the direction I want to go. The code
+		  doesn't allow me to automatically go flying in one direction.
+		  I did not get around to implementing any of the other features, and I
+		  can foresee myself focusing more on fire-film and mb-porfolio this
+		  upcoming week. So maybe, we could start to think about a shift in 
+		  focus for the game. Right now, it's as if I'm working on my first
+		  game again and having to follow the same tips that I did when I was 
+		  working on that game. We could have a game where we simply scale a 
+		  mountain or just remove the wall and focus on other platforming aspects.
+		  
+		  if you want, you can try to figure out why you cannot go into one direction.

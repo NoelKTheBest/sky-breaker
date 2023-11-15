@@ -194,6 +194,7 @@ animations = [ {
 [node name="KinematicBody2D" type="KinematicBody2D"]
 position = Vector2( 395, 3 )
 script = ExtResource( 5 )
+ACCEL = 25
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource( 1 )
@@ -208,7 +209,7 @@ wait_time = 2.5
 one_shot = true
 
 [node name="WallJumpTimer" type="Timer" parent="."]
-wait_time = 0.5
+wait_time = 2.0
 
 [connection signal="timeout" from="WallClingTimer" to="." method="_on_WallCingTimer_timeout"]
 [connection signal="timeout" from="WallJumpTimer" to="." method="_on_WallJumpTimer_timeout"]
